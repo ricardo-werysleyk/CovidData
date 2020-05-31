@@ -8,9 +8,15 @@ var tempoCD = 500;
 
 //Variaveis dos elementos HTML
 var boardPrincipal = document.getElementById('boardPrincipal');
+var select = document.getElementById('paises');
 var spin = document.getElementById('spiner');
 var inputCasos = document.getElementById('inputCasos');
-var select = document.getElementById('paises');
+var inputCasosHoje = document.getElementById('inputCasosHoje');
+var inputAtivos = document.getElementById('inputAtivos');
+var inputMortes = document.getElementById('inputMortes');
+var inputMortesHoje = document.getElementById('inputMortesHoje');
+var inputCritico = document.getElementById('inputCritico');
+var inputRecuperados = document.getElementById('inputRecuperados');
 
 
 boardPrincipal.classList.add('tipoNulo');
@@ -70,5 +76,20 @@ function alimentaSelect(){
         var opt = document.createElement('option');
         opt.innerHTML = country[i];
         select.appendChild(opt);
+    }
+    alimentaInputs();
+}
+
+function alimentaInputs(){
+    for(var i in dadosApi){
+        if(select.value == country[i]){
+            inputCasos.innerHTML = cases[i]
+            inputCasosHoje.innerHTML = todayCases[i]
+            inputMortes.innerHTML = deaths[i]
+            inputMortesHoje.innerHTML = todayDeaths[i]
+            inputRecuperados.innerHTML = recovered[i]
+            inputAtivos.innerHTML = active[i]
+            inputCritico.innerHTML = critical[i]
+        }
     }
 }

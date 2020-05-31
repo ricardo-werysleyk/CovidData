@@ -54,12 +54,12 @@ section.boards{
     display: flex;
     position: relative;
     z-index: 1;
+    color: #242424;
 }
 section.boards .board{
     width: 33.3%;
     height: 100%;
     padding: 10px 2%;
-    background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -94,13 +94,19 @@ section.boards .board .box .total{
 }
 
 .tipo1{
-    background-color: rgba(255, 255, 0, 0.3);
+    /* background-color: rgba(255, 255, 0, 0.3); */
+    background-image: linear-gradient(120deg, #f6d46596 0%, #fd9f8596 100%);
 }
 .tipo2{
-    background-color: rgba(0, 128, 0, 0.3);
+    /* background-color: rgba(0, 128, 0, 0.3); */
+    background-image: linear-gradient(-225deg, rgba(223, 255, 205, 0.568) 0%, rgb(66, 197, 132) 48%, rgba(57, 243, 187, 0.596) 100%);
 }
 .tipo3{
-    background-color: rgba(255, 0, 0, 0.3);
+    /* background-color: rgba(255, 0, 0, 0.3); */
+    background-image: linear-gradient(to top right, #ff0844 0%, #ee5a5a 100%);
+}
+.tipoBusca{
+    background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.514) 0%, #90F9C4 48%, rgba(46, 48, 47, 0.596) 100%);
 }
 .tipoNulo{
     opacity: 0;

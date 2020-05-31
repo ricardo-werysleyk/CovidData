@@ -31,42 +31,42 @@
         <div class="board">
             <div class="box tipo1">
                 <div class="descricao"><h1 class="titulos">Casos</h1></div>
-                <div class="total"><h1 class="numerais" id="inputCasos">123674</h1></div>
+                <div class="total"><h1 class="numerais" id="inputCasos"></h1></div>
             </div>
             <div class="box tipo1">
                 <div class="descricao"><h1 class="titulos">Casos de Hoje</h1></div>
-                <div class="total"><h1 class="numerais" id="inputCasosHoje">123674</h1></div>
+                <div class="total"><h1 class="numerais" id="inputCasosHoje"></h1></div>
             </div>
             <div class="box tipo1">
                 <div class="descricao"><h1 class="titulos">Ativos</h1></div>
-                <div class="total"><h1 class="numerais" id="inputAtivos">123674</h1></div>
+                <div class="total"><h1 class="numerais" id="inputAtivos"></h1></div>
             </div>
         </div>
         <div class="board">
-            <div class="box tipo2" id="boxSearch">
+            <div class="box tipoBusca" id="boxSearch">
                 <label for="paises">Local da pesquisa</label>
-                <select class="custom-select custom-select-lg mb-3" name="paises" id="paises">
+                <select class="custom-select custom-select-lg mb-3" name="paises" id="paises" onchange="alimentaInputs()">
                     
                 </select>
             </div>
             <div class="box tipoNulo"></div>
             <div class="box tipo2">
-                <div class="descricao"><h1 class="titulos">RECUPERADOS</h1></div>
-                <div class="total"><h1 class="numerais" id="inputRecuperados">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">CURADOS</h1></div>
+                <div class="total"><h1 class="numerais" id="inputRecuperados"></h1></div>
             </div>
         </div>
         <div class="board">
             <div class="box tipo3">
                 <div class="descricao"><h1 class="titulos">Mortes</h1></div>
-                <div class="total"><h1 class="numerais" id="inputMortes">123674</h1></div>
+                <div class="total"><h1 class="numerais" id="inputMortes"></h1></div>
             </div>
             <div class="box tipo3">
                 <div class="descricao"><h1 class="titulos">Mortes de Hoje</h1></div>
-                <div class="total"><h1 class="numerais" id="inputMortesHoje">123674</h1></div>
+                <div class="total"><h1 class="numerais" id="inputMortesHoje"></h1></div>
             </div>
             <div class="box tipo3">
-                <div class="descricao"><h1 class="titulos">Critico</h1></div>
-                <div class="total"><h1 class="numerais" id="inputCritico">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Crítico</h1></div>
+                <div class="total"><h1 class="numerais" id="inputCritico"></h1></div>
             </div>
         </div>
     </section>
@@ -414,7 +414,7 @@
     </section>
 
     <footer>
-        <p>Ricardo Werysleyk @copy</p>
+        <p>Ricardo Werysleyk <i class="far fa-copyright"></i></p>
     </footer>
 
     <script src="js/jquery.js"></script>
