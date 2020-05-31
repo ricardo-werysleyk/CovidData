@@ -4,16 +4,30 @@ var casesPerOneMillion = [], deathsPerOneMillion = [], totalTests = [];
 var dadosApi = [];
 var done = false;
 var attDados;
-var tempoCD = 1000;
+var tempoCD = 500;
 
 //Variaveis dos elementos HTML
+var boardPrincipal = document.getElementById('boardPrincipal');
+var spin = document.getElementById('spiner');
 var inputCasos = document.getElementById('inputCasos');
+var select = document.getElementById('paises');
+
+
+boardPrincipal.classList.add('tipoNulo');
+spin.classList.remove('tipoNulo');
 
 
 carregaApi();
-// attDados = setInterval(() => {
-//     carregaVariaveis();
-// }, tempoCD);
+attDados = setInterval(() => {
+    carregaVariaveis();
+}, tempoCD);
+
+setTimeout(function(){
+    alimentaSelect();
+    boardPrincipal.classList.remove('tipoNulo');
+    boardPrincipal.classList.add('fadeIn');
+    spin.classList.add('tipoNulo');
+},5000)
 
 function carregaApi(){
     fetch('https://coronavirus-19-api.herokuapp.com/countries')
@@ -48,5 +62,13 @@ function carregaVariaveis(){
         console.log('done');
     }else{
         console.log('Requisição em andamento!')
+    }
+}
+
+function alimentaSelect(){
+    for(var i in dadosApi){
+        var opt = document.createElement('option');
+        opt.innerHTML = country[i];
+        select.appendChild(opt);
     }
 }

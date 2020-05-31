@@ -8,6 +8,11 @@
     <meta name="description" content="Site de serviços personal trainer de José Wilton">
     <meta name="keywords" content="Jóse Wilton,personal trainer,exercicios,formafisica,academia,saúde,profissional">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/corona.css">
     <link rel="stylesheet" href="css/style.css">
@@ -19,43 +24,49 @@
         <div class="container">
             <h1>Covid-19 Map</h1>
         </div>
+        <div id="spiner"></div>
     </header>
 
-    <section class="boards">
+    <section id="boardPrincipal" class="boards">
         <div class="board">
             <div class="box tipo1">
-                <div class="descricao"><h1>Casos</h1></div>
-                <div class="total"><h1 id="inputCasos">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Casos</h1></div>
+                <div class="total"><h1 class="numerais" id="inputCasos">123674</h1></div>
             </div>
             <div class="box tipo1">
-                <div class="descricao"><h1>Casos de Hoje</h1></div>
-                <div class="total"><h1 id="inputCasosHoje">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Casos de Hoje</h1></div>
+                <div class="total"><h1 class="numerais" id="inputCasosHoje">123674</h1></div>
             </div>
             <div class="box tipo1">
-                <div class="descricao"><h1>Ativos</h1></div>
-                <div class="total"><h1 id="inputAtivos">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Ativos</h1></div>
+                <div class="total"><h1 class="numerais" id="inputAtivos">123674</h1></div>
             </div>
         </div>
         <div class="board">
-            <div class="box tipo2"></div>
+            <div class="box tipo2" id="boxSearch">
+                <label for="paises">Local da pesquisa</label>
+                <select class="custom-select custom-select-lg mb-3" name="paises" id="paises">
+                    
+                </select>
+            </div>
             <div class="box tipoNulo"></div>
             <div class="box tipo2">
-                <div class="descricao"><h1>Recuperados</h1></div>
-                <div class="total"><h1 id="inputRecuperados">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">RECUPERADOS</h1></div>
+                <div class="total"><h1 class="numerais" id="inputRecuperados">123674</h1></div>
             </div>
         </div>
         <div class="board">
             <div class="box tipo3">
-                <div class="descricao"><h1>Mortes</h1></div>
-                <div class="total"><h1 id="inputMortes">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Mortes</h1></div>
+                <div class="total"><h1 class="numerais" id="inputMortes">123674</h1></div>
             </div>
             <div class="box tipo3">
-                <div class="descricao"><h1>Mortes de Hoje</h1></div>
-                <div class="total"><h1 id="inputMortesHoje">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Mortes de Hoje</h1></div>
+                <div class="total"><h1 class="numerais" id="inputMortesHoje">123674</h1></div>
             </div>
             <div class="box tipo3">
-                <div class="descricao"><h1>Critico</h1></div>
-                <div class="total"><h1 id="inputCritico">123674</h1></div>
+                <div class="descricao"><h1 class="titulos">Critico</h1></div>
+                <div class="total"><h1 class="numerais" id="inputCritico">123674</h1></div>
             </div>
         </div>
     </section>
@@ -406,6 +417,8 @@
         <p>Ricardo Werysleyk @copy</p>
     </footer>
 
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/functions.js"></script>
 </body>
 </html>

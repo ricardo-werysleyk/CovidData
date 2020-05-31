@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 html,body{
     width: 100%;
@@ -31,12 +32,11 @@ header{
     width: 100%;
     height: 90px;
     padding: 10px;
-    /* background-color: #ccc; */
 }
 header h1{
     color: white;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
 }
 footer{
     width: 100%;
@@ -52,6 +52,8 @@ section.boards{
     height: calc(100% - 120px);
     padding: 0 2%;
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 section.boards .board{
     width: 33.3%;
@@ -74,22 +76,76 @@ section.boards .board .box .descricao{
     width: 100%;
     height: 50%;
     text-align: center;
+    padding: 10px 0;
 }
 section.boards .board .box .total{
     width: 100%;
     height: 50%;
     text-align: center;
+    padding: 10px 0;
+}
+
+#boxSearch{
+    background-color: rgba(0, 0, 0, 0.247);
+}
+#boxSearch label{
+    text-align: center;
+    font-size: 30px;
 }
 
 .tipo1{
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.3);
 }
 .tipo2{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.3);
 }
 .tipo3{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.3);
 }
 .tipoNulo{
     opacity: 0;
+}
+
+.titulos{
+    font-size: 40px;
+    font-weight: 400;
+}
+.numerais{
+    font-weight: 700;
+}
+
+.fadeIn{
+    animation: fadeIn 1s linear both;
+}
+
+.fadeOut{
+    animation: fadeIn reverse 1s linear both;
+}
+
+#spiner{
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(0,0,0, .2);
+    border-left-color: #22a6b3;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    position: absolute;
+    left: 47%;
+    top: 48%;
+    z-index: 1;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
 }
